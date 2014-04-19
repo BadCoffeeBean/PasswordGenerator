@@ -83,7 +83,7 @@ namespace PasswordGenerator
             if (txtSpecial.Text == "" && chkSpecial.Checked) //empty string
                 MessageBox.Show("Please input at least one special character", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else if (!chkSpecial.Checked) //if unchecked, then length is 0
-            txtCombi.Text = pp.getCombinationsCount(chkUpper.Checked, chkLower.Checked, chkNum.Checked, 0, (long)nudCharCount.Value);
+                txtCombi.Text = pp.getCombinationsCount(chkUpper.Checked, chkLower.Checked, chkNum.Checked, 0, (long)nudCharCount.Value);
             else
                 txtCombi.Text = pp.getCombinationsCount(chkUpper.Checked, chkLower.Checked, chkNum.Checked, (long)txtSpecial.Text.Length, (long)nudCharCount.Value);
         }
